@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>template instruct test</title>
+</head>
+<body>
+#set(var = 10)
+#define tableList(userList)
+<table>
+	<tr>
+		<th>序   号</th>
+		<th>用户名</th>
+		<th>密   码</th>
+	</tr>
+	
+	#for(user : userList)
+	<tr>
+		<td>#(for.index)</td>
+		<td>#(user.username)</td>
+		<td>#(user.password)</td>
+		
+	</tr>
+	#if(for.index > 9)
+	<!-- 直接返回，但不支持返回值，只是用来提前结束这个方法 -->
+	 	#return
+	#end
+	#else
+		<p>当前没有用户</p>
+		
+	#end
+</table>
+</body>
+</html>

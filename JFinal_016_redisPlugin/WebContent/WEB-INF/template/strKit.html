@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>template instruct test</title>
+</head>
+<body>
+###只是单行注释
+
+#--
+
+这是多行注释
+--#
+
+#[[
+	表示这里面的内容不被解析，即使是指令
+	#@test()
+	#@isBlank(str)
+
+]]#
+
+
+	<!-- 有点类似Struts的静态调用，除了这种方式，还可以在config中的configEngine中me.addShareStaticMethod(com.jfinal.entity.User.class) -->
+	#if(isBlank(str) && com.jfinal.entity.User::dao)
+	
+	
+	#end
+</body>
+</html>

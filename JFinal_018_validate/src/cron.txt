@@ -1,0 +1,12 @@
+cronName=task1,task2
+
+task1.cron=* * * * *
+task1.class=com.jfinal.task.Task1
+task1.daemon=true
+task1.enable=true
+
+
+task2.cron=5 * * * *
+task2.class=com.jfinal.task.Task2
+task2.daemon=true
+task2.enable=true
